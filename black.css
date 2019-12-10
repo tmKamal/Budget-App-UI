@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+
+.box{
+  
+  height: 120px;
+  
+  background: rgb(187, 252, 11);
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.black{
+    background-color: rgb(85, 83, 83);
+    height: 300px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.black-small{
+    background-color: rgb(219, 57, 179);
+    height: 100px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.green{
+    background-color: green;
+    height: 150px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.red{
+    background-color: red;
+    height: 50px;
+    float: left;
+}
+
+.grid{
+    background: rgb(151, 19, 19);
+  
+}
+
