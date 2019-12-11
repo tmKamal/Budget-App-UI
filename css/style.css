@@ -1,23 +1,25 @@
-/*=====Colors=====
+/*=====Colors==========
 Background - #F5F6FA
 Green - #4ABDAC
-=================*/
+=======================*/
 
-/*================
- Genral Settings 
- =================*/
-* {
+/*=====================
+    Genral Settings 
+ ======================*/
+*,
+*::after,
+*::before {
     margin    : 0;
     padding   : 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
-    font-size: 16px;
+    /* font-size: 10px; */ /* 1rem = 10px */ /* but when we set this up as a pixel value old people can't cange the fontsize from the bowser */
     /* this will simplifies the all rem value calculations */
+    font-size: 62.5%; 
 }
 
-/*Font Settings*/
 body {
     font-family     : 'lato', sans-serif;
     /* font-size    : 1.6rem; */
@@ -25,11 +27,10 @@ body {
     line-height     : 1.7;
     color           : #777;
     background-color: #F5F6FA;
+    box-sizing      : border-box;
 
 }
-
 /* End - General Settings */
-
 
 /*==============================
     Side Menu-Bar
@@ -44,18 +45,18 @@ body {
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 25rem;
 }
 
 #sidebar-wrapper {
     z-index         : 100;
     position        : fixed;
-    left            : 250px;
+    left            : 25rem;
     width           : 0;
     height          : 100vh;
     max-height      : 100vh;
-    margin-left     : -250px;
-    padding-top     : 5px;
+    margin-left     : -25rem;
+    padding-top     : .5rem;
     overflow        : hidden;
     background-color: #fff;
     font-weight     : 400;
@@ -75,7 +76,7 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 25rem;
 
 }
 
@@ -90,7 +91,7 @@ body {
     /* We move it contents with the sidebar animation */
     position: absolute;
     /* Otherwise it will overlapsed */
-    margin-right: -250px;
+    margin-right: -25rem;
 
 }
 
@@ -98,46 +99,46 @@ body {
 
 .logo-side-bar {
     text-align: center;
-    margin-top: 5px;
+    margin-top: .5rem;
 }
 
 .logo-side-bar img {
-    width       : 100px;
+    width       : 10rem;
     height      : auto;
-    margin-right: 20px;
+    margin-right: 2rem;
 
 }
 
 .toggle_menu {
     /*position      : fixed;
     left            : 0;*/
-    padding         : 5px 10px 5px 10px;
+    padding         : .5rem 1rem .5rem 1rem;
     /*margin-top    : 10px;*/
     color           : white;
     cursor          : pointer;
     background-color: #648B79;
     z-index         : 10000;
-    font-size       : 20px;
+    font-size       : 2rem;
     transition      : all 0.4s ease-out;
 }
 
 /* Navigation List Styles */
 .navigation_section {
-    margin     : 20px 0;
+    margin     : 2rem 0;
     display    : block;
-    width      : 200px;
-    margin-left: 25px;
+    width      : 20rem;
+    margin-left: 2.5rem;
     list-style : none;
 }
 
 .navigation_item {
     font-weight        : 200;
-    padding-bottom     : 12px;
-    padding-top        : 18px;
+    padding-bottom     : 1.2rem;
+    padding-top        : 1.8rem;
     box-sizing         : border-box;
-    font-size          : 14px;
-    border-top         : 2px solid;
-    border-bottom      : 2px solid;
+    font-size          : 1.4rem;
+    border-top         : .2rem solid;
+    border-bottom      : .2rem solid;
     border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 0%, rgba(240, 240, 240, 0.8158613787311799) 70%, rgba(255, 255, 255, 1) 100%);
     transition         : all 0.1s ease-in-out;
     cursor             : pointer;
@@ -147,24 +148,24 @@ body {
 
 .first-list-item {
     margin-bottom: auto;
-    margin-top   : 20px;
+    margin-top   : 2rem;
 }
 
 .material-icons.crsidebarIcon {
-    font-size: 24px;
+    font-size: 2.4rem;
 
 }
 
 .sidebarText {
-    font-size: 14px;
+    font-size: 1.4rem;
 
 }
 
 
 .navigation_item:hover {
     color              : #47484A;
-    border-top         : 2px solid;
-    border-bottom      : 2px solid;
+    border-top         : .2rem solid;
+    border-bottom      : .2rem solid;
     border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(157, 152, 152, 1) 0%, rgba(157, 152, 152, 0.8802871490393032) 70%, rgba(255, 255, 255, 1) 100%);
     border-image-slice : 1;
     transition         : all 0.1s ease-in-out;
@@ -183,13 +184,13 @@ body {
 ===========================*/
 
 .page-nav {
-    height            : 50px;
+    height            : 5rem;
     width             : 100%;
     background-color  : #fff;
     /*box-shadow      :0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;*/
-    -moz-box-shadow   : 1px 2px 4px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-    box-shadow        : 1px 2px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow   : .1rem .2rem .4rem rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: .1rem .2rem .4rem rgba(0, 0, 0, .5);
+    box-shadow        : .1rem .2rem .4rem rgba(0, 0, 0, .5);
 }
 
 .page-nav ul {
@@ -201,17 +202,17 @@ body {
 
     list-style   : none;
     display      : inline-block;
-    font-size    : 15px;
+    font-size    : 1.5rem;
     font-weight  : 300;
-    padding-right: 10px;
-    padding-left : 10px;
+    padding-right: 1rem;
+    padding-left : 1rem;
     line-height  : 3.4;
     color        : #8A8D94;
 }
 
 .material-icons.crMenu {
     /* icon customization */
-    font-size  : 32px;
+    font-size  : 3.2rem;
     color      : rgba(0, 0, 0, 0.54);
     line-height: 1.6;
     font-weight: bold;
@@ -220,9 +221,9 @@ body {
 
 .material-icons.top-nav-icon {
     vertical-align: middle;
-    margin-bottom : 4px;
-    margin-left   : 5px;
-    font-size     : 28px;
+    margin-bottom : .4rem;
+    margin-left   : .5rem;
+    font-size     : 2.8rem;
 }
 
 .page-nav ul li a:link,
@@ -246,15 +247,16 @@ body {
 
 
 .popup-user {
-    margin-top        : 10px;
+    margin-top        : 1rem;
     background-color  : #fff;
-    border-radius     : 5px;
+    border-radius     : .5rem;
     width             : 150%;
     height            : auto;
     position          : absolute;
     z-index           : 100;
-    -webkit-box-shadow: 1px 3px 10px -2px rgba(0, 0, 0, 0.86);
-    box-shadow        : 1px 3px 10px -2px rgba(0, 0, 0, 0.86);
+    -moz-box-shadow   : .1rem .3rem 1rem -.2rem rgba(0, 0, 0, 0.86);
+    -webkit-box-shadow: .1rem .3rem 1rem -.2rem rgba(0, 0, 0, 0.86);
+    box-shadow        : .1rem .3rem 1rem -.2rem rgba(0, 0, 0, 0.86);
     display           : none;
 }
 
@@ -268,10 +270,10 @@ body {
     content: "";
     /* Created using border */
     position    : absolute;
-    top         : -20px;
+    top         : -2rem;
     left        : 40%;
     transform   : translateX(-50%);
-    border      : 10px solid;
+    border      : 1rem solid;
     border-color: transparent transparent #fff transparent;
 }
 
@@ -299,11 +301,11 @@ body {
 .bgt-mas {
     /* This class is essential for the masonery Grid */
     float     : left;
-    min-height: 20px;
+    min-height: 2rem;
 }
 
 .budget-cards-wrapper {
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 }
 
 /* clearfix */
@@ -316,26 +318,26 @@ body {
 
 .budget-card-container {
     background-color     : #fff;
-    padding              : 15px;
-    padding-right        : 10px;
-    border               : 1px solid rgba(0, 0, 0, .125);
+    padding              : 1.5rem;
+    padding-right        : 1rem;
+    border               : .1rem solid rgba(0, 0, 0, .125);
     /* -webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.57); 
     box-shadow           : 0px 0px 3px 1px rgba(0,0,0,0.57); */
 }
 
 .budget-card-body {
     background-color: #F5F6FA;
-    padding-left    : 10px;
-    padding-right   : 10px;
-    padding-top     : 20px;
-    padding-bottom  : 20px;
-    border-radius   : 6px;
+    padding-left    : 1rem;
+    padding-right   : 1rem;
+    padding-top     : 2rem;
+    padding-bottom  : 2rem;
+    border-radius   : .6rem;
 }
 
 .budget-card-body-heading {
     width        : 100%;
     overflow     : hidden;
-    margin-bottom: 1.875rem;
+    margin-bottom: 3rem;
     display      : flex;
     align-items  : flex-end;
 
@@ -343,7 +345,7 @@ body {
 
 .budget-card-body-heading .budget-title {
     order         : 1;
-    letter-spacing: -.02em;
+    letter-spacing: -.03em;
     font-weight   : 700;
     margin-bottom : 0;
     color         : #4ABDAC;
@@ -353,10 +355,10 @@ body {
 .budget-card-body-heading:after {
     content         : "";
     order           : 1;
-    height          : 2px;
-    margin-bottom   : .25rem;
-    margin-left     : .625rem;
-    margin-right    : .625rem;
+    height          : .2rem;
+    margin-bottom   : .2rem;
+    margin-left     : 1rem;
+    margin-right    : 1rem;
     flex            : 1 1 0%;
     background-color: #e8e8e8;
 }
@@ -369,10 +371,10 @@ body {
 
 .item-info {
     background-color: #fff;
-    padding-top     : 10px;
-    padding-bottom  : 2px;
-    margin-bottom   : 10px;
-    line-height     : 1.6px;
+    padding-top     : 1rem;
+    padding-bottom  : .2rem;
+    margin-bottom   : 1rem;
+    line-height     : .15rem;
 }
 
 .price-tag {
@@ -381,18 +383,18 @@ body {
 }
 
 .budget-card-container h5 {
-    font-size: 16px;
+    font-size: 1.6rem;
 
 }
 
 .delete-btn {
-    font-size     : 16px;
+    font-size     : 1.6rem;
     background    : none;
     border        : none;
     cursor        : pointer;
     display       : inline-block;
     vertical-align: top;
-    margin-top    : -2px;
+    margin-top    : -.2rem;
     display       : none;
 }
 
@@ -401,7 +403,7 @@ body {
 }
 
 .delete-btn:active {
-    transform: translateY(2px);
+    transform: translateY(.2rem);
 }
 
 .item-info:hover .delete-btn {
@@ -409,7 +411,7 @@ body {
 }
 
 .item-info:hover .price-tag {
-    transform: translateX(-20px);
+    transform: translateX(-2rem);
 }
 
 /*==============================
@@ -417,16 +419,15 @@ body {
 ================================*/
 
 .page-content-body-wrapper {
-    padding   : 15px;
-    margin-top: 20px;
+    padding   : 1.5rem;
+    margin-top: 2rem;
 }
 
 .main_content {
     background-color: #fff;
-    /*box-shadow    : 0 1px 1px rgba(0, 0, 0, .05);*/
-    box-shadow      : 1px 1px 1px rgba(0, 0, 0, 0.2);
-    border          : 1px solid rgba(0, 0, 0, .125);
-    padding         : 20px 20px;
+    box-shadow      : .1rem .1rem .1rem rgba(0, 0, 0, 0.2);
+    border          : .1rem solid rgba(0, 0, 0, .125);
+    padding         : 2rem 2rem;
 }
 
 /*Section -Titles
@@ -435,14 +436,14 @@ body {
 .content-title {
 
     padding-left : 0;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
 
 }
 
 .content-title h2 {
-    font-size    : 18px;
+    font-size    : 1.8rem;
     color        : #4e555b;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     font-weight  : 400;
 }
 
@@ -478,6 +479,17 @@ Responsive Media Queries
     #wrapper.toggled #page-content-wrapper {
         position    : relative;
         margin-right: 0;
+    }
+}
+
+
+@media (min-width: 1200px) {/* This applies from 600px onwards */
+    html {
+        font-size: 10px; 
+        
+    }
+    body{
+        font-size: 14px;
     }
 }
 
