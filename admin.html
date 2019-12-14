@@ -14,118 +14,107 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Admin Panel</title>
+    <title>Budget App</title>
 </head>
 
 <body>
     <!--Admin Panel-->
     <div id="wrapper" class="toggled">
         <!--======================
-        SIDE BAR
+                SIDE BAR
         ==========================-->
-        <div id="sidebar-wrapper">
-            <div class="logo-side-bar ">
+        <div id="sidebar">
+            <div class="sidebar__logo">
                 <img src="img/logo.png" alt="logo">
             </div>
-            <div class="first-list-item">
-                <ul class="navigation_section list-container">
-                    <li class="navigation_item">
+            <div class="sidebar__nav-top-section">
+                <ul class="sidebar__nav-list">
+                    <li class="sidebar__nav-item">
                         <div class="row">
-                            <div class="col-2 icon-containerSidebar">
-                                <i class="material-icons crsidebarIcon">mail_outline</i>
+                            <div class="col-4 sidebar__icon-container">
+                                <i class="material-icons sidebar__icon">local_shipping</i>
                             </div>
-                            <div class="col-10 sidebarText">
+                            <div class="col-8 sidebar__text">
                                 Dash Board
                             </div>
                         </div>
                     </li>
-                    <li class="navigation_item">
+                    <li class="sidebar__nav-item">
                         <div class="row">
-                            <div class="col-2 icon-containerSidebar">
-                                <i class="material-icons crsidebarIcon">local_shipping</i>
+                            <div class="col-4 sidebar__icon-container">
+                                <i class="material-icons sidebar__icon">local_shipping</i>
                             </div>
-                            <div class="col-10 sidebarText">
+                            <div class="col-8 sidebar__text">
                                 Income
                             </div>
                         </div>
                     </li>
-                    <li class="navigation_item">
+                    <li class="sidebar__nav-item">
                         <div class="row">
-                            <div class="col-2 icon-containerSidebar">
-                                <i class="material-icons crsidebarIcon">access_time</i>
+                            <div class="col-4 sidebar__icon-container">
+                                <i class="material-icons sidebar__icon">local_shipping</i>
                             </div>
-                            <div class="col-10 sidebarText">
+                            <div class="col-8 sidebar__text">
                                 Expenses
                             </div>
                         </div>
                     </li>
-                    <li class="navigation_item">
+                    <li class="sidebar__nav-item">
                         <div class="row">
-                            <div class="col-2 icon-containerSidebar">
-                                <i class="material-icons crsidebarIcon">done_all</i>
+                            <div class="col-4 sidebar__icon-container">
+                                <i class="material-icons sidebar__icon">local_shipping</i>
                             </div>
-                            <div class="col-10 sidebarText">
+                            <div class="col-8 sidebar__text">
                                 Summary
                             </div>
                         </div>
                     </li>
-                    <li class="navigation_item">
+                    <li class="sidebar__nav-item">
                         <div class="row">
-                            <div class="col-2 icon-containerSidebar">
-                                <i class="material-icons crsidebarIcon">trending_up</i>
+                            <div class="col-4 sidebar__icon-container">
+                                <i class="material-icons sidebar__icon">local_shipping</i>
                             </div>
-                            <div class="col-10 sidebarText">
+                            <div class="col-8 sidebar__text">
                                 History
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="last-list-item">
-                <ul class="navigation_section list-container">
-
-                    <li class="navigation_item">
+            <div class="sidebar__nav-bottom-section">
+                <ul class="sidebar__nav-list">
+                    <li class="sidebar__nav-item">
                         <div class="row">
-                            <div class="col-2 icon-containerSidebar">
-                                <i class="material-icons crsidebarIcon">exit_to_app</i>
+                            <div class="col-4 sidebar__icon-container">
+                                <i class="material-icons sidebar__icon">local_shipping</i>
                             </div>
-                            <div class="col-10 sidebarText">
-                                LOG OUT
+                            <div class="col-8 sidebar__text">
+                                Log Out
                             </div>
                         </div>
                     </li>
-
                 </ul>
             </div>
-
-
-            <!-- <div class="sign-out-center">
-                <a href="#"><h1 class="boxed_item boxed_item_smaller signup">
-                    <i class="material-icons">exit_to_app</i>
-                        SIGN OUT</h1>
-                </a>
-            </div> -->
         </div>
         <!--End SIDE BAR-->
 
-        <!--======================
-        page Content
-        ==========================-->
-        <div id="page-content-wrapper">
+        <div id="right-side-wrapper">
             <div class="container-fluid">
-                <!--Page Navigation Bar-->
+                <!--=======================
+                    Top Navigation Bar
+                ============================-->
                 <div class="row">
-                    <div class="col-sm-12 page-nav">
+                    <div class="col-sm-12 top-nav">
                         <div class="container">
-                            <a href="#" id="tog_btn" onclick="openSlide()"><i class="material-icons crMenu">menu</i></a>
+                            <a href="#" id="tog_btn" onclick="openSlide()"><i class="material-icons top-nav-toggle-icon">menu</i></a>
                             <ul>
-                                <li><a href="contactus.html"><i class="material-icons top-nav-icon">search</i></a></li>
+                                <li><a href="contactus.html"><i class="material-icons top-nav__icon">search</i></a></li>
                                 <li><a href="index.html"><i
-                                            class="material-icons top-nav-icon">notifications_none</i></a></li>
-                                <li class="drop-user"><a href="#">User<i
-                                            class="material-icons top-nav-icon">account_circle</i></a>
+                                            class="material-icons top-nav__icon">notifications_none</i></a></li>
+                                <li class="user-drop-down"><a href="#">User<i
+                                            class="material-icons top-nav__icon">account_circle</i></a>
                                     <!-- DropDown -->
-                                    <div class="popup-user ">
+                                    <div class="user-drop-down__menu ">
                                         <ul>
                                             <li><a href="#">Profile</a></li>
                                             <li><a href="#">Sign-Out</a></li>
@@ -141,21 +130,21 @@
 
                 <!--All of Our Page Contents Goes Here!!
                 ========================================-->
-                <div class="page-content-body-wrapper">
+                <div class="page-content-wrapper">
                     <div class="budget-cards-wrapper"><!-- Budget-Cards-Wrapper -->
                         <div class="bgt-mas col-xl-6 col-lg-6 col-md-12 mb-4 "><!-- Budget-Card -->
-                            <div class="budget-card-container">
+                            <div class="budget-card">
                                 <!-- budget-card-header -->
-                                <div class=" budget-card-header row">
-                                    <div class="col-3 info-card-icon">
-                                        <h3>Free Lancing</h3>
+                                <div class="budget-card__header row">
+                                    <div class="col-6 budget-card__title">
+                                        <h2>Free Lancing</h2>
                                     </div>
-                                    <div class="col-9 info-card-title">
-                                        <h5>Revenue</h5>
-                                        <h3>10,000</h3>
+                                    <div class="col-6 budget-card__total">
+                                        <h3>Revenue</h3>
+                                        <h4>10,000</h4>
                                     </div><!-- header end -->
                                 </div>
-                                <div class="budget-card-form ">
+                                <div class="budget-card__form ">
                                     <!-- form  -->
                                     <form>
                                         <div class="form-row align-items-center">
@@ -181,96 +170,105 @@
                                     </form>
                                     <!-- form End -->
                                 </div>
-                                <div class="budget-card-body">
+                                <div class="budget-card__body">
                                     <!-- Section Income -->
                                     <div class="row">
                                         <!-- Heading- income -->
-                                        <div class="col-12 budget-card-body-heading">
-                                            <h4 class="budget-title">Income</h4>
+                                        <div class="col-12 title-with-border">
+                                            <h4 class="title-with-border__h4">Income</h4>
                                         </div>
                                     </div>
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-4 price-tag">
+                                            <div class="col-4 budget-card__price-tag">
                                                 <h5>98,000</h5>
                                             </div>
-                                            <div class="col-2 delete-btn">
+                                            <div class="col-2 budget-card__delete-btn">
                                                 <i class="material-icons">
                                                     highlight_off
                                                 </i>
                                             </div>
                                         </div>
-
                                     </div><!-- Item End-->
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-4">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
                                             </div>
-                                            <div class="col-2 delete-btn">
+                                            <div class="col-2 budget-card__delete-btn">
                                                 <i class="material-icons">
                                                     highlight_off
                                                 </i>
                                             </div>
                                         </div>
-                                    </div><!-- Items End-->
+                                    </div><!-- Item End-->
                                     <!-- Section Income End -->
                                     <!-- Section Expenses -->
-                                    <div class="row mt-4">
+                                    <div class="row mt-5">
                                         <!-- Heading-Expenses -->
-                                        <div class="col-12 budget-card-body-heading">
-                                            <h4 class="budget-title">Expenses</h4>
+                                        <div class="col-12 title-with-border">
+                                            <h4 class="title-with-border__h4">Expenses</h4>
                                         </div>
                                     </div>
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-6">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
+                                            </div>
+                                            <div class="col-2 budget-card__delete-btn">
+                                                <i class="material-icons">
+                                                    highlight_off
+                                                </i>
                                             </div>
                                         </div>
-
                                     </div><!-- Item End-->
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <!-- Items -->
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-6">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
+                                            </div>
+                                            <div class="col-2 budget-card__delete-btn">
+                                                <i class="material-icons">
+                                                    highlight_off
+                                                </i>
                                             </div>
                                         </div>
-                                    </div><!-- Items End-->
+                                    </div><!-- Item End-->
                                     <!-- Section Expenses End -->
                                 </div><!-- Card Body End -->
                             </div><!-- Card Container End -->
                         </div><!-- Budget-card-End -->
                         
                         <div class="bgt-mas col-xl-6 col-lg-6 col-md-12 mb-4 "><!-- Budget-Card -->
-                            <div class="budget-card-container">
+                            <div class="budget-card">
                                 <!-- budget-card-header -->
-                                <div class=" budget-card-header row">
-                                    <div class="col-3 info-card-icon">
-                                        <h3>Free Lancing</h3>
+                                <div class="budget-card__header row">
+                                    <div class="col-6 budget-card__title">
+                                        <h2>Free Lancing</h2>
                                     </div>
-                                    <div class="col-9 info-card-title">
-                                        <h5>Revenue</h5>
-                                        <h3>10,000</h3>
+                                    <div class="col-6 budget-card__total">
+                                        <h3>Revenue</h3>
+                                        <h4>10,000</h4>
                                     </div><!-- header end -->
                                 </div>
-                                <div class="budget-card-form ">
+                                <div class="budget-card__form ">
                                     <!-- form  -->
                                     <form>
                                         <div class="form-row align-items-center">
@@ -296,130 +294,137 @@
                                     </form>
                                     <!-- form End -->
                                 </div>
-                                <div class="budget-card-body">
+                                <div class="budget-card__body">
                                     <!-- Section Income -->
                                     <div class="row">
                                         <!-- Heading- income -->
-                                        <div class="col-12 budget-card-body-heading">
-                                            <h4 class="budget-title">Income</h4>
+                                        <div class="col-12 title-with-border">
+                                            <h4 class="title-with-border__h4">Income</h4>
                                         </div>
                                     </div>
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-4 price-tag">
+                                            <div class="col-4 budget-card__price-tag">
                                                 <h5>98,000</h5>
                                             </div>
-                                            <div class="col-2 delete-btn">
+                                            <div class="col-2 budget-card__delete-btn">
                                                 <i class="material-icons">
                                                     highlight_off
                                                 </i>
                                             </div>
                                         </div>
-
                                     </div><!-- Item End-->
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <h5>Web Hosting </h5>
-                                                </div>
-                                                <div class="col-4 price-tag">
-                                                    <h5>98,000</h5>
-                                                </div>
-                                                <div class="col-2 delete-btn">
-                                                    <i class="material-icons">
-                                                        highlight_off
-                                                    </i>
-                                                </div>
-                                            </div>
-    
-                                        </div><!-- Item End-->
-                                        <!-- Items -->
-                                    <div class="col-12 item-info">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <h5>Web Hosting </h5>
-                                                </div>
-                                                <div class="col-4 price-tag">
-                                                    <h5>98,000</h5>
-                                                </div>
-                                                <div class="col-2 delete-btn">
-                                                    <i class="material-icons">
-                                                        highlight_off
-                                                    </i>
-                                                </div>
-                                            </div>
-    
-                                        </div><!-- Item End-->
-                                    <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-4">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
                                             </div>
-                                            <div class="col-2 delete-btn">
+                                            <div class="col-2 budget-card__delete-btn">
                                                 <i class="material-icons">
                                                     highlight_off
                                                 </i>
                                             </div>
                                         </div>
-                                    </div><!-- Items End-->
+                                    </div><!-- Item End-->
+                                    <!-- Items -->
+                                    <div class="col-12 budget-card__item">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h5>Web Hosting </h5>
+                                            </div>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
+                                            </div>
+                                            <div class="col-2 budget-card__delete-btn">
+                                                <i class="material-icons">
+                                                    highlight_off
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div><!-- Item End-->
+                                    <!-- Items -->
+                                    <div class="col-12 budget-card__item">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h5>Web Hosting </h5>
+                                            </div>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
+                                            </div>
+                                            <div class="col-2 budget-card__delete-btn">
+                                                <i class="material-icons">
+                                                    highlight_off
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div><!-- Item End-->
                                     <!-- Section Income End -->
                                     <!-- Section Expenses -->
-                                    <div class="row mt-4">
+                                    <div class="row mt-5">
                                         <!-- Heading-Expenses -->
-                                        <div class="col-12 budget-card-body-heading">
-                                            <h4 class="budget-title">Expenses</h4>
+                                        <div class="col-12 title-with-border">
+                                            <h4 class="title-with-border__h4">Expenses</h4>
                                         </div>
                                     </div>
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-6">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
+                                            </div>
+                                            <div class="col-2 budget-card__delete-btn">
+                                                <i class="material-icons">
+                                                    highlight_off
+                                                </i>
                                             </div>
                                         </div>
-
                                     </div><!-- Item End-->
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <!-- Items -->
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-6">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
+                                            </div>
+                                            <div class="col-2 budget-card__delete-btn">
+                                                <i class="material-icons">
+                                                    highlight_off
+                                                </i>
                                             </div>
                                         </div>
-                                    </div><!-- Items End-->
+                                    </div><!-- Item End-->
                                     <!-- Section Expenses End -->
                                 </div><!-- Card Body End -->
                             </div><!-- Card Container End -->
                         </div><!-- Budget-card-End -->
 
                         <div class="bgt-mas col-xl-6 col-lg-6 col-md-12 mb-4 "><!-- Budget-Card -->
-                            <div class="budget-card-container">
+                            <div class="budget-card">
                                 <!-- budget-card-header -->
-                                <div class=" budget-card-header row">
-                                    <div class="col-3 info-card-icon">
-                                        <h3>Free Lancing</h3>
+                                <div class="budget-card__header row">
+                                    <div class="col-6 budget-card__title">
+                                        <h2>Free Lancing</h2>
                                     </div>
-                                    <div class="col-9 info-card-title">
-                                        <h5>Revenue</h5>
-                                        <h3>10,000</h3>
+                                    <div class="col-6 budget-card__total">
+                                        <h3>Revenue</h3>
+                                        <h4>10,000</h4>
                                     </div><!-- header end -->
                                 </div>
-                                <div class="budget-card-form ">
+                                <div class="budget-card__form ">
                                     <!-- form  -->
                                     <form>
                                         <div class="form-row align-items-center">
@@ -445,95 +450,104 @@
                                     </form>
                                     <!-- form End -->
                                 </div>
-                                <div class="budget-card-body">
+                                <div class="budget-card__body">
                                     <!-- Section Income -->
                                     <div class="row">
                                         <!-- Heading- income -->
-                                        <div class="col-12 budget-card-body-heading">
-                                            <h4 class="budget-title">Income</h4>
+                                        <div class="col-12 title-with-border">
+                                            <h4 class="title-with-border__h4">Income</h4>
                                         </div>
                                     </div>
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-4 price-tag">
+                                            <div class="col-4 budget-card__price-tag">
                                                 <h5>98,000</h5>
                                             </div>
-                                            <div class="col-2 delete-btn">
+                                            <div class="col-2 budget-card__delete-btn">
                                                 <i class="material-icons">
                                                     highlight_off
                                                 </i>
                                             </div>
                                         </div>
-
                                     </div><!-- Item End-->
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-4">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
                                             </div>
-                                            <div class="col-2 delete-btn">
+                                            <div class="col-2 budget-card__delete-btn">
                                                 <i class="material-icons">
                                                     highlight_off
                                                 </i>
                                             </div>
                                         </div>
-                                    </div><!-- Items End-->
+                                    </div><!-- Item End-->
                                     <!-- Section Income End -->
                                     <!-- Section Expenses -->
-                                    <div class="row mt-4">
+                                    <div class="row mt-5">
                                         <!-- Heading-Expenses -->
-                                        <div class="col-12 budget-card-body-heading">
-                                            <h4 class="budget-title">Expenses</h4>
+                                        <div class="col-12 title-with-border">
+                                            <h4 class="title-with-border__h4">Expenses</h4>
                                         </div>
                                     </div>
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-6">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
+                                            </div>
+                                            <div class="col-2 budget-card__delete-btn">
+                                                <i class="material-icons">
+                                                    highlight_off
+                                                </i>
                                             </div>
                                         </div>
-
                                     </div><!-- Item End-->
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <!-- Items -->
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-6">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
+                                            </div>
+                                            <div class="col-2 budget-card__delete-btn">
+                                                <i class="material-icons">
+                                                    highlight_off
+                                                </i>
                                             </div>
                                         </div>
-                                    </div><!-- Items End-->
+                                    </div><!-- Item End-->
                                     <!-- Section Expenses End -->
                                 </div><!-- Card Body End -->
                             </div><!-- Card Container End -->
                         </div><!-- Budget-card-End -->
                         <div class="bgt-mas col-xl-6 col-lg-6 col-md-12 mb-4 "><!-- Budget-Card -->
-                            <div class="budget-card-container">
+                            <div class="budget-card">
                                 <!-- budget-card-header -->
-                                <div class=" budget-card-header row">
-                                    <div class="col-3 info-card-icon">
-                                        <h3>Free Lancing</h3>
+                                <div class="budget-card__header row">
+                                    <div class="col-6 budget-card__title">
+                                        <h2>Free Lancing</h2>
                                     </div>
-                                    <div class="col-9 info-card-title">
-                                        <h5>Revenue</h5>
-                                        <h3>10,000</h3>
+                                    <div class="col-6 budget-card__total">
+                                        <h3>Revenue</h3>
+                                        <h4>10,000</h4>
                                     </div><!-- header end -->
                                 </div>
-                                <div class="budget-card-form ">
+                                <div class="budget-card__form ">
                                     <!-- form  -->
                                     <form>
                                         <div class="form-row align-items-center">
@@ -559,157 +573,100 @@
                                     </form>
                                     <!-- form End -->
                                 </div>
-                                <div class="budget-card-body">
+                                <div class="budget-card__body">
                                     <!-- Section Income -->
                                     <div class="row">
                                         <!-- Heading- income -->
-                                        <div class="col-12 budget-card-body-heading">
-                                            <h4 class="budget-title">Income</h4>
+                                        <div class="col-12 title-with-border">
+                                            <h4 class="title-with-border__h4">Income</h4>
                                         </div>
                                     </div>
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-4 price-tag">
+                                            <div class="col-4 budget-card__price-tag">
                                                 <h5>98,000</h5>
                                             </div>
-                                            <div class="col-2 delete-btn">
+                                            <div class="col-2 budget-card__delete-btn">
                                                 <i class="material-icons">
                                                     highlight_off
                                                 </i>
                                             </div>
                                         </div>
-
                                     </div><!-- Item End-->
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-4">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
                                             </div>
-                                            <div class="col-2 delete-btn">
+                                            <div class="col-2 budget-card__delete-btn">
                                                 <i class="material-icons">
                                                     highlight_off
                                                 </i>
                                             </div>
                                         </div>
-                                    </div><!-- Items End-->
+                                    </div><!-- Item End-->
                                     <!-- Section Income End -->
                                     <!-- Section Expenses -->
-                                    <div class="row mt-4">
+                                    <div class="row mt-5">
                                         <!-- Heading-Expenses -->
-                                        <div class="col-12 budget-card-body-heading">
-                                            <h4 class="budget-title">Expenses</h4>
+                                        <div class="col-12 title-with-border">
+                                            <h4 class="title-with-border__h4">Expenses</h4>
                                         </div>
                                     </div>
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-6">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
+                                            </div>
+                                            <div class="col-2 budget-card__delete-btn">
+                                                <i class="material-icons">
+                                                    highlight_off
+                                                </i>
                                             </div>
                                         </div>
-
                                     </div><!-- Item End-->
                                     <!-- Items -->
-                                    <div class="col-12 item-info">
+                                    <!-- Items -->
+                                    <div class="col-12 budget-card__item">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5>Web Hosting </h5>
                                             </div>
-                                            <div class="col-6">
-                                                <h5>18,000</h5>
+                                            <div class="col-4 budget-card__price-tag">
+                                                <h5>98,000</h5>
+                                            </div>
+                                            <div class="col-2 budget-card__delete-btn">
+                                                <i class="material-icons">
+                                                    highlight_off
+                                                </i>
                                             </div>
                                         </div>
-                                    </div><!-- Items End-->
+                                    </div><!-- Item End-->
                                     <!-- Section Expenses End -->
                                 </div><!-- Card Body End -->
                             </div><!-- Card Container End -->
                         </div><!-- Budget-card-End -->
                     </div>
                     <!--===================== 
-                        Content
+                        Content Goes here!!
                     =========================== -->
-                    <div class="row justify-content-center">
-                        <!--Custom page content-->
-                        <div class="main_content col-lg-11 col-md-12 col-sm-12 ">
-
-                            <!--form-->
-                            <form action="addproduct.php" class="form-horizontal" method="post"
-                                enctype="multipart/form-data">
-                                <fieldset>
-
-                                    <!-- Form Name -->
-                                    <div class="content-title">
-                                        <h2>ADD PRODUCT</h2>
-                                    </div>
-
-                                    <!-- Input Product Name-->
-                                    <div class="form-group row">
-                                        <label for="prodName" class="col-lg-2 col-form-label-sm">Product Name</label>
-                                        <div class="col-lg-10">
-                                            <input type="text" class="form-control form-control-sm" id="prodName"
-                                                name="prodName" placeholder="Product Name">
-                                        </div>
-                                    </div>
-
-                                    <!--Image uploader-->
-                                    <!-- <div class="form-group row">
-                                        <label for="prodImg22" class="col-lg-2 col-form-label-sm">Images</label>
-                                        <input type="file" name="file[]" id="file" class="inputfile inputfile-6" data-multiple-caption="{count} files selected" multiple />
-                                        <label for="file"><span></span> <strong> Choose a file&hellip;</strong></label>
-                                    </div> -->
-
-                                    <!-- Input Product Price-->
-                                    <div class="form-group row">
-                                        <label for="prodPrice" class="col-lg-2 col-form-label-sm">Price</label>
-                                        <div class="col-lg-10">
-                                            <input type="text" class="form-control form-control-sm" id="prodPrice"
-                                                name="prodPrice" placeholder="2500">
-                                        </div>
-                                    </div>
-
-                                    <!-- DropDown Product Category-->
-                                    <div class="form-group row">
-                                        <label for="prodCategory" class="col-lg-2 col-form-label-sm">Category</label>
-                                        <div class="col-lg-10">
-                                            <select class="form-control form-control-sm" id="prodCategory"
-                                                name="prodCategory">
-                                                <option value="1">Phone</option>
-                                                <option value="2">Back covers</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <!-- TextArea Product description-->
-                                    <div class="form-group row">
-                                        <label for="prodDescription"
-                                            class="col-lg-2 col-form-label-sm">Description</label>
-                                        <div class="col-lg-10">
-                                            <textarea class="form-control form-control-sm" id="prodDescription"
-                                                name="prodDescription"
-                                                placeholder="Details about your Product. (300 words or less..)"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <button name="btnSubmit" type="submit"
-                                        class="btn btn-outline-success btn-sm">Submit</button>
-
-                                </fieldset>
-                            </form>
-                        </div>
-                        <!--Main content end-->
-                        <!--END-Custom page content-->
-                    </div>
+                    
+                        <!-- No main Container for this App -->
+                        
+                    <!-- Contents End -->
+                    
                 </div>
             </div>
         </div>

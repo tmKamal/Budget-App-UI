@@ -1,507 +1,492 @@
-/* Genral Settings */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*=====Colors==========
+Background - #F5F6FA
+Green - #4ABDAC
+=======================*/
+
+/*=====================
+    Genral Settings 
+ ======================*/
+*,
+*::after,
+*::before {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: inherit;
 }
 
-html{
-    font-size: 16px; /* this will simplifies the all rem value calculations */
+html {
+    /* font-size: 10px; */ /* 1rem = 10px */ /* but when we set this up as a pixel value old people can't cange the fontsize from the bowser */
+    /* this will simplifies the all rem value calculations */
+    font-size: 62.5%; 
 }
 
-/*Font Settings*/
-body{
-    font-family: 'lato',sans-serif;
-    /* font-size: 1.6rem; */
-    font-weight: 400;
-    line-height: 1.7;
-    color: #777;
+body {
+    font-family     : 'lato', sans-serif;
+    /* font-size    : 1.6rem; */
+    font-weight     : 400;
+    line-height     : 1.7;
+    color           : #777;
     background-color: #F5F6FA;
+    box-sizing      : border-box;
 
 }
-
-
+/* End - General Settings */
 
 /*==============================
-NEW STRUCTURE
+    Side Menu-Bar
 ================================*/
 
-#wrapper{
-    padding-left: 0;
+#wrapper {
+    padding-left      : 0;
     -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -moz-transition   : all 0.5s ease;
+    -o-transition     : all 0.5s ease;
+    transition        : all 0.5s ease;
 }
 
-#wrapper.toggled{
-    padding-left: 250px;
+#wrapper.toggled {
+    padding-left: 25rem;
 }
 
-#sidebar-wrapper {
-    z-index: 100;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100vh;
-    max-height: 100vh;
-    margin-left: -250px;
-    padding-top: 5px;
-    overflow: hidden;
-    background-color:#fff;
-    font-weight: 400;
-    color: #47484A; /*sidebar font color */
-    opacity: 0.9;
+#sidebar {
+    z-index         : 100;
+    position        : fixed;
+    left            : 25rem;
+    width           : 0;
+    height          : 100vh;
+    max-height      : 100vh;
+    margin-left     : -25rem;
+    padding-top     : .5rem;
+    overflow        : hidden;
+    background-color: #fff;
+    font-weight     : 400;
+    color           : #47484A;
+    /*sidebar font color */
+    opacity           : 0.9;
     -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    -webkit-box-shadow: 7px 0px 11px -11px rgba(0,0,0,0.77); 
-    box-shadow: 7px 0px 11px -11px rgba(0,0,0,0.77);
-    display: flex;/* flex properties */
+    -moz-transition   : all 0.5s ease-in-out;
+    -o-transition     : all 0.5s ease-in-out;
+    transition        : all 0.5s ease-in-out;
+    -webkit-box-shadow: 7px 0px 11px -11px rgba(0, 0, 0, 0.77);
+    box-shadow        : 7px 0px 11px -11px rgba(0, 0, 0, 0.77);
+    display           : flex;
+    /* flex properties */
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction : column;
 }
 
-#wrapper.toggled #sidebar-wrapper{
-    width: 250px;
+#wrapper.toggled #sidebar {
+    width: 25rem;
 
 }
 
-#page-content-wrapper{
-    width: 100%;
+#right-side-wrapper {
+    /* This is the main content Window */
+    width   : 100%;
     position: absolute;
 
 }
 
-#wrapper.toggled #page-content-wrapper{
+#wrapper.toggled #right-side-wrapper {
+    /* We move it contents with the sidebar animation */
     position: absolute;
-    margin-right: -250px;
+    /* Otherwise it will overlapsed */
+    margin-right: -25rem;
 
 }
 
-/*END - NEW STRUCTURE
-================================*/
+/*Styles Of Side Menu-Bar*/
 
-/*===============================
-Styles Of Side-Bar
-=================================*/
-.logo-side-bar{
+.sidebar__logo {
     text-align: center;
-    margin-top: 5px;
-}
-.logo-side-bar img{
-    width: 100px;
-    height: auto;
-    margin-right: 20px;
-    
+    margin-top: .5rem;
 }
 
-.toggle_menu{
-    /*position: fixed;
-    left: 0;*/
-    padding: 5px 10px 5px 10px;
-    /*margin-top: 10px;*/
-    color: white;
-    cursor: pointer;
+.sidebar__logo img {
+    width       : 10rem;
+    height      : auto;
+    margin-right: 2rem;
+
+}
+
+.toggle_menu {
+    /*position      : fixed;
+    left            : 0;*/
+    padding         : .5rem 1rem .5rem 1rem;
+    /*margin-top    : 10px;*/
+    color           : white;
+    cursor          : pointer;
     background-color: #648B79;
-    z-index: 10000;
-    font-size: 20px;
-    transition: all 0.4s ease-out;
+    z-index         : 10000;
+    font-size       : 2rem;
+    transition      : all 0.4s ease-out;
+}
+
+.sidebar__nav-top-section {
+    margin-bottom: auto; /*from doing this, section will take all the bottom space, so no need to write any css rules for the bottom section */
+    margin-top   : 2rem;
+}
+
+/* Navigation List Styles */
+.sidebar__nav-list {
+    margin     : 2rem 0;
+    display    : block;
+    width      : 20rem;
+    margin-left: 2.5rem;
+    list-style : none;
+}
+
+.sidebar__nav-item {
+    font-weight        : 200;
+    padding-bottom     : 1.2rem;
+    padding-top        : 1.8rem;
+    box-sizing         : border-box;
+    font-size          : 1.4rem;
+    border-top         : .2rem solid;
+    border-bottom      : .2rem solid;
+    border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 0%, rgba(240, 240, 240, 0.8158613787311799) 70%, rgba(255, 255, 255, 1) 100%);
+    transition         : all 0.1s ease-in-out;
+    cursor             : pointer;
+}
+
+.sidebar__icon-container{
+    text-align: right;
+}
+
+.sidebar__icon {
+    font-size: 2.4rem;
+    display: inline-block;
+
+}
+
+.sidebar__text {
+    font-size: 1.4rem;
+
+}
+
+.sidebar__nav-item:hover {
+    color              : #47484A;
+    border-top         : .2rem solid;
+    border-bottom      : .2rem solid;
+    border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(157, 152, 152, 1) 0%, rgba(157, 152, 152, 0.8802871490393032) 70%, rgba(255, 255, 255, 1) 100%);
+    border-image-slice : 1;
+    transition         : all 0.1s ease-in-out;
 }
 
 
-
-
-
-.navigation_section{
-    margin: 20px 0;
-    display: block;
-    width: 200px;
-    margin-left: 25px;
-    list-style: none;
-}
-
-/* .list-container{
-    
-} */
-
-.navigation_item{
-    font-weight: 200;
-    padding-bottom: 12px;
-    padding-top: 18px;
-    box-sizing: border-box;
-    font-size: 14px;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    border-image-source: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 0%, rgba(240,240,240,0.8158613787311799) 70%, rgba(255,255,255,1) 100%);
-    transition: all 0.1s ease-in-out;
-    cursor: pointer;
-    
-    
-}
-.first-list-item{
-    margin-bottom: auto;
-    margin-top: 20px;
-}
-
-.material-icons.crsidebarIcon{
-    font-size: 24px;
-    
-}
-
-.sidebarText{
-    font-size: 14px;
-   
-}
-
-
-.navigation_item:hover{
-    color: #47484A;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    border-image-source: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(157,152,152,1) 0%, rgba(157,152,152,0.8802871490393032) 70%, rgba(255,255,255,1) 100%);
-    border-image-slice: 1;
-    transition: all 0.1s ease-in-out;
-}
-
-
-.boxed_item_smaller{
-    font-size: 12px;
-    color: #D8D8D8;
-    width: 200px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    border-width: 1px;
-    margin: 0 0 20px 0;
-}
-
-.boxed_item_smaller:hover{
-    background-color: white;
-    color: #111;
-    transition: all 0.3s ease-in-out;
-}
-
-
-/*END - Styles Of Side-Bar
+/*END - Styles Of Side Menu-Bar
 =================================*/
+
 
 /*==================================
-Main Content
+        Main Content - Right Side
 ===================================*/
 
-/*Navigation
-=============*/
+/*=========================
+        Top Navigation
+===========================*/
 
-.page-nav{
-    height: 50px;
-    width: 100%;
-    background-color: #fff;
-    /*box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;*/
-    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
-    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+.top-nav {
+    height            : 5rem;
+    width             : 100%;
+    background-color  : #fff;
+    /*box-shadow      :0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;*/
+    -moz-box-shadow   : .1rem .2rem .4rem rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: .1rem .2rem .4rem rgba(0, 0, 0, .5);
+    box-shadow        : .1rem .2rem .4rem rgba(0, 0, 0, .5);
 }
 
-.page-nav ul{
-    float: right;
+.top-nav ul {
+    float        : right;
     /* margin-top: -3px; */
 }
 
-.page-nav ul li{
+.top-nav ul li {
 
-    list-style: none;
-    display: inline-block;
-    font-size: 15px;
-    font-weight: 300;
-    padding-right: 10px;
-    padding-left: 10px;
-    line-height:3.4;
-    color: #8A8D94;
+    list-style   : none;
+    display      : inline-block;
+    font-size    : 1.5rem;
+    font-weight  : 300;
+    padding-right: 1rem;
+    padding-left : 1rem;
+    line-height  : 3.4;
+    color        : #8A8D94;
 }
 
-.material-icons.crMenu{ /* icon customization */
-    font-size: 32px;
-    color: rgba(0, 0, 0, 0.54);
+.material-icons.top-nav-toggle-icon {
+    /* icon customization */
+    font-size  : 3.2rem;
+    color      : rgba(0, 0, 0, 0.54);
     line-height: 1.6;
     font-weight: bold;
 
 }
-.material-icons.top-nav-icon{
+
+.material-icons.top-nav__icon {
     vertical-align: middle;
-    margin-bottom: 4px;
-    margin-left: 5px;
-    font-size: 28px;
+    margin-bottom : .4rem;
+    margin-left   : .5rem;
+    font-size     : 2.8rem;
 }
 
-.page-nav ul li a:link,
-.page-nav ul li a:visited{
+.top-nav ul li a:link,
+.top-nav ul li a:visited {
 
     text-decoration: none;
-    color: #777;
+    color          : #777;
 
 }
 
-.page-nav ul li a:hover,
-.page-nav ul li a:active{
+.top-nav ul li a:hover,
+.top-nav ul li a:active {
 
-    color: #000;
+    color      : #000;
     font-weight: 400;
 }
 
-.drop-user{
+.user-drop-down {
     position: relative;
 }
 
 
-.popup-user{
-    margin-top: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    width: 150%;
-    height: auto;
-    position: absolute;
-    z-index: 100;
-    -webkit-box-shadow: 1px 3px 10px -2px rgba(0,0,0,0.86); 
-    box-shadow: 1px 3px 10px -2px rgba(0,0,0,0.86);
-    display: none;
+.user-drop-down__menu {
+    margin-top        : 1rem;
+    background-color  : #fff;
+    border-radius     : .5rem;
+    width             : 150%;
+    height            : auto;
+    position          : absolute;
+    z-index           : 100;
+    -moz-box-shadow   : .1rem .3rem 1rem -.2rem rgba(0, 0, 0, 0.86);
+    -webkit-box-shadow: .1rem .3rem 1rem -.2rem rgba(0, 0, 0, 0.86);
+    box-shadow        : .1rem .3rem 1rem -.2rem rgba(0, 0, 0, 0.86);
+    display           : none;
 }
-.active{
+
+.active {
     display: block;
 }
-/* Arow icon  */
-/* Created using border */
-.popup-user:before{
+
+/* User Drop Down */
+.user-drop-down__menu:before {
+    /* Arow icon  */
     content: "";
-    position: absolute;
-    top: -20px;
-    left: 40%;
-    transform: translateX(-50%);
-    border:10px solid;
+    /* Created using border */
+    position    : absolute;
+    top         : -2rem;
+    left        : 40%;
+    transform   : translateX(-50%);
+    border      : 1rem solid;
     border-color: transparent transparent #fff transparent;
 }
 
-.popup-user ul{
-    float: none;
-    margin-left: auto;
+.user-drop-down__menu ul {
+    float       : none;
+    margin-left : auto;
     margin-right: auto;
-    width: 70%;
+    width       : 70%;
 }
 
-.popup-user ul li{
-    list-style: none;
+.user-drop-down__menu ul li {
+    list-style : none;
     line-height: 3.0;
-    display: block;
+    display    : block;
 }
 
+/*End - User Drop Down */
 
 /*END-Navigation*/
 
-/*=========================
-        Cards
-===========================  */
+/*==============================
+        Budget App Cards
+ =============================== */
 
+.bgt-mas {
+    /* This class is essential for the masonery Grid */
+    float     : left;
+    min-height: 2rem;
+}
 
-.info-card-container{
-    background-color: #fff;
-    padding: 5px;
-    padding-right: 10px;
-    border: 1px solid rgba(0,0,0,.125);
+.budget-cards-wrapper {
+    margin-bottom: 3rem;
+}
+
+/* clearfix */
+.budget-cards-wrapper:after {
+    /* also for the masonery Grid , Not essential, For the Good Practice */
+    content: '';
+    display: block;
+    clear  : both;
+}
+
+.budget-card {
+    background-color     : #fff;
+    padding              : 1.5rem;
+    padding-right        : 1rem;
+    border               : .1rem solid rgba(0, 0, 0, .125);
     /* -webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.57); 
-    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.57); */
-    
+    box-shadow           : 0px 0px 3px 1px rgba(0,0,0,0.57); */
+}
 
+.budget-card__header{
+    margin-bottom: 5px;
 }
-.info-card-icon{
-    text-align: left;
+
+.budget-card__title{
+    color: #4ABDAC;
 }
-.material-icons.info-card-icon-customized{
-    margin-top: 5px;
-    font-size: 65px;
-    font-weight: 300;
-    color: green;
-    
-}
-.info-card-title h5{
-    font-size: 14px;
+
+.budget-card__title h2{
+    font-size: 32px;
     font-weight: 700;
+    background: #ffffff;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.budget-card__total{
     text-align: right;
-    margin-top: 5px;
-
-}
-.info-card-title h3{
-    font-size: 28px;
-    font-weight: 300;
-    text-align: right;
-}
-.material-icons.info-card-footer-icon{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-    
-}
-.info-card-footer{/* Aligining icon fonts with a text */
-    border-top-color: rgba(0, 0, 0, 0.1);
-    border-top-style: solid;
-    border-top-width: 1px;
-    padding: 10px 0;
-    display: inline-flex;
-    vertical-align: middle;
-    align-items: center;
+    padding-right: 20px;
 }
 
-.info-card-footer span{
-    font-size: 14px;
-    margin-left: 5px;
-}
-.info-card-footer-icon{
-    font-size: 18px;
-}
-/* End of the Cards */
-
-/*======================
-    Content
-========================*/
-
-.page-content-body-wrapper{
-    padding: 15px;
-    margin-top: 20px;
+.budget-card__total h3{
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.main_content{
+.budget-card__total h4{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.budget-card__form{
+    margin-bottom: 10px;
+}
+
+.budget-card__body {
+    background-color: #F5F6FA;
+    padding-left    : 1rem;
+    padding-right   : 1rem;
+    padding-top     : 2rem;
+    padding-bottom  : 2rem;
+    border-radius   : .6rem;
+}
+
+
+.title-with-border {
+    width        : 100%;
+    overflow     : hidden;
+    margin-bottom: 3rem;
+    display      : flex;
+    align-items  : flex-end;
+
+}
+
+.title-with-border .title-with-border__h4 {
+    order         : 1;
+    letter-spacing: -.03em;
+    font-weight   : 700;
+    margin-bottom : 0;
+    color         : #4ABDAC;
+    line-height   : 1;
+}
+
+.title-with-border:after {
+    content         : "";
+    order           : 1;
+    height          : .2rem;
+    margin-bottom   : .2rem;
+    margin-left     : 1rem;
+    margin-right    : 1rem;
+    flex            : 1 1 0%;
+    background-color: #e8e8e8;
+}
+
+.title-with-border .title-with-border__h4 a {
+    display   : block;
+    color     : #4ABDAC;
+    transition: all .2s ease-in-out;
+}
+
+.budget-card__item {
     background-color: #fff;
-    /*box-shadow: 0 1px 1px rgba(0, 0, 0, .05);*/
-    box-shadow: 1px 1px 1px rgba(0, 0,0, 0.2);
-    border: 1px solid rgba(0,0,0,.125);
-    padding: 20px 20px;
+    padding-top     : 1rem;
+    padding-bottom  : .2rem;
+    margin-bottom   : 1rem;
+    line-height     : .15rem;
+}
+
+.budget-card__price-tag {
+    text-align: end;
+    transition: transform 0.3s;
+}
+
+.budget-card h5 {
+    font-size: 1.6rem;
+
+}
+
+.budget-card__delete-btn {
+    font-size     : 1.6rem;
+    background    : none;
+    border        : none;
+    cursor        : pointer;
+    display       : inline-block;
+    vertical-align: top;
+    margin-top    : -.2rem;
+    display       : none;
+}
+
+.budget-card__delete-btn:focus {
+    outline: none;
+}
+
+.budget-card__delete-btn:active {
+    transform: translateY(.2rem);
+}
+
+.budget-card__item:hover .budget-card__delete-btn {
+    display: block;
+}
+
+.budget-card__item:hover .budget-card__price-tag {
+    transform: translateX(-2rem);
+}
+
+/*==============================
+     Main - Content - Container
+================================*/
+
+.page-content-wrapper {
+    padding   : 1.5rem;
+    margin-top: 2rem;
+}
+
+.main_content {
+    background-color: #fff;
+    box-shadow      : .1rem .1rem .1rem rgba(0, 0, 0, 0.2);
+    border          : .1rem solid rgba(0, 0, 0, .125);
+    padding         : 2rem 2rem;
 }
 
 /*Section -Titles
 ==================*/
 
-.content-title{
+.content-title {
 
-    padding-left: 0;
-    margin-bottom: 40px;
-
-}
-
-.content-title h2{
-    font-size: 18px;
-    color: #4e555b;
-    margin-bottom: 20px;
-    font-weight: 400;
-}
-
-
-
-/*============================== 
-these css only for the image input
-================================= */
-/*CSS for HIDE original input */
-.inputfile {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-/*HIDE end*/
-
-
-.inputfile + label {
-    max-width: 80%;
-    font-size: 14px;
-    /* 20px */
-    font-weight: 500;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    padding: 3px 10px;
-    /* 10px 20px */
-    border-radius: 3px; /*EDITED*/
-    margin-left: 15px;
-}
-
-
-
-.inputfile:focus + label,
-.inputfile.has-focus + label {
-    outline: 1px dotted #000;
-    outline: -webkit-focus-ring-color auto 5px;
-}
-
-/* .inputfile + label * {
-    
-}
- */
-
-
-/*style-6*/
-.inputfile-6 + label {
-    color: #d3394c;
+    padding-left : 0;
+    margin-bottom: 4rem;
 
 }
 
-.inputfile-6 + label {
-    border: 1px solid #b2b2b2;
-    background-color: #f1e5e6;
-    padding: 0;
+.content-title h2 {
+    font-size    : 1.8rem;
+    color        : #4e555b;
+    margin-bottom: 2rem;
+    font-weight  : 400;
 }
 
-.inputfile-6:focus + label,
-.inputfile-6.has-focus + label,
-.inputfile-6 + label:hover {
-    border-color: #722040;
-}
-
-.inputfile-6 + label span,
-.inputfile-6 + label strong {
-    padding: 5px 10px;  /*EDITED*/
-    /* 10px 20px */
-}
-
-.inputfile-6 + label span {
-    width: 200px;
-    min-height: 18px;
-    display: inline-block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    vertical-align: top;
-}
-
-.inputfile-6 + label strong {
-    height: 100%;
-    color: #f1e5e6;
-    background-color: #d3394c;
-    display: inline-block;
-}
-
-.inputfile-6:focus + label strong,
-.inputfile-6.has-focus + label strong,
-.inputfile-6 + label:hover strong {
-    background-color: #722040;
-}
-
-@media screen and (max-width: 50em) {
-    .inputfile-6 + label strong {
-        display: block;
-    }
-}
-
-/*end image input*/
-
-/*End-Content*/
-
-
-/*End MAIN CONTENT
+/*End MAIN CONTENT-Container
 ===================================*/
-
 
 
 /*==================================
@@ -511,136 +496,40 @@ Responsive Media Queries
     #wrapper {
         padding-left: 0;
     }
+
     #wrapper.toggled {
         padding-left: 250px;
     }
-    #sidebar-wrapper {
+
+    #sidebar {
         width: 0;
     }
-    #wrapper.toggled #sidebar-wrapper {
+
+    #wrapper.toggled #sidebar {
         width: 250px;
     }
-    #page-content-wrapper {
+
+    #right-side-wrapper {
 
         position: relative;
     }
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
+
+    #wrapper.toggled #right-side-wrapper {
+        position    : relative;
         margin-right: 0;
     }
 }
 
 
-
-
-/*==============================
-            Budget Card
- =============================== */
- .bgt-mas{
-    float: left;
-    min-height: 20px;
+@media (min-width: 1200px) {/* This applies from 600px onwards */
+    html {
+        font-size: 10px; 
+        
+    }
+    body{
+        font-size: 14px;
+    }
 }
 
-.budget-cards-wrapper{
-    margin-bottom: 30px;
-}
-/* clearfix */
-.budget-cards-wrapper:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-
-
-
-.budget-card-container{
-    background-color: #fff;
-    padding: 15px;
-    padding-right: 10px;
-    border: 1px solid rgba(0,0,0,.125);
-    /* -webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.57); 
-    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.57); */
-}
-
-.budget-card-body{
-    background-color: #F5F6FA;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 6px;
-}
-
-.budget-card-body-heading {
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 1.875rem;
-    display: flex;
-    align-items: flex-end;
-    
-}
-
-.budget-card-body-heading .budget-title {
-    order: 1;
-    letter-spacing: -.02em;
-    font-weight: 700;
-    margin-bottom: 0;
-    color: #4ABDAC;
-    line-height: 1;
-}
-
-.budget-card-body-heading:after {
-    content: "";
-    order: 1;
-    height: 2px;
-    margin-bottom: .25rem;
-    margin-left: .625rem;
-    margin-right: .625rem;
-    flex: 1 1 0%;
-    background-color: #e8e8e8;
-}
-
-.budget-card-body-heading .budget-title a {
-    display: block;
-    color:#4ABDAC;
-    transition: all .2s ease-in-out;
-}
-
-.item-info{
-    background-color: #fff;
-    padding-top: 10px;
-    padding-bottom: 2px;
-    margin-bottom: 10px;
-    line-height: 1.6px;
-}
-
-.price-tag{
-    text-align: end;
-    transition: transform 0.3s;
-}
-
-.budget-card-container h5{
-    font-size: 16px;
-
-}
-
-.delete-btn {
-    font-size: 16px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: top;
-    margin-top: -2px;
-    display: none;
-    
-    
-}
-
-
-
-.delete-btn:focus { outline: none; }
-.delete-btn:active { transform: translateY(2px); }
-
-.item-info:hover .delete-btn { display: block; }
-.item-info:hover .price-tag { transform: translateX(-20px); }
+/* End-Responsive Media Queries
+===================================*/
