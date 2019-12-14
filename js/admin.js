@@ -20,14 +20,14 @@ function openSlide(){
 
 //User Drop-Down
 
-const userDrop=document.querySelector('.popup-user');
-const adminIcon=document.querySelector('.drop-user');
+const userDrop=document.querySelector('.user-drop-down__menu');
+const adminIcon=document.querySelector('.user-drop-down');
 adminIcon.addEventListener('click',function(){
     userDrop.classList.toggle('active');
 });
 //hide it when clicking anywhere else except the popup and the trigger
 $(document).on('click touch', function(event) {
-    if (!$(event.target).parents().addBack().is('.popup-user') && !$(event.target).parents().addBack().is('.drop-user')) {
+    if (!$(event.target).parents().addBack().is('.user-drop-down__menu') && !$(event.target).parents().addBack().is('.user-drop-down')) {
         userDrop.classList.remove('active');
     }
   });
