@@ -1,0 +1,22 @@
+{
+  "name": "budget_app_design",
+  "version": "1.0.0",
+  "description": "sass implementation of the budgetapp design",
+  "main": "mas.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cr-hunteR/Budget-App-UI.git"
+  },
+  "author": "crhunter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cr-hunteR/Budget-App-UI/issues"
+  },
+  "homepage": "https://github.com/Cr-hunteR/Budget-App-UI#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

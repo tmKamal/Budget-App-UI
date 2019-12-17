@@ -1,0 +1,144 @@
+/*==============================
+     Side Menu-Bar
+ ================================*/
+#wrapper {
+    padding-left      : 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition   : all 0.5s ease;
+    -o-transition     : all 0.5s ease;
+    transition        : all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 25rem;
+}
+
+.sidebar {
+    z-index         : 100;
+    position        : fixed;
+    left            : 25rem;
+    width           : 0;
+    height          : 100vh;
+    max-height      : 100vh;
+    margin-left     : -25rem;
+    padding-top     : .5rem;
+    overflow        : hidden;
+    background-color: $color-white;
+    color           : $color-nice-gray;
+    /*sidebar font color */
+    opacity           : 0.9;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition   : all 0.5s ease-in-out;
+    -o-transition     : all 0.5s ease-in-out;
+    transition        : all 0.5s ease-in-out;
+    -webkit-box-shadow: 7px 0px 11px -11px rgba(0, 0, 0, 0.77);
+    box-shadow        : 7px 0px 11px -11px rgba(0, 0, 0, 0.77);
+    display           : flex;
+    /* flex properties */
+    justify-content: space-between;
+    flex-direction : column;
+
+    &__logo {
+        text-align: center;
+        margin-top: .5rem;
+    }
+
+    &__logo img {
+        width       : 10rem;
+        height      : auto;
+        margin-right: 2rem;
+    }
+
+    &__nav-top-section {
+        margin-bottom: auto;
+        /*from doing this, section will take all the bottom space, so no need to write any css rules for the bottom section */
+        margin-top: 2rem;
+    }
+
+    /* Navigation List Styles */
+    &__nav-list {
+        margin     : 2rem 0;
+        display    : block;
+        width      : 20rem;
+        margin-left: 2.5rem;
+        list-style : none;
+    }
+
+    &__nav-item {
+        font-weight        : 500;
+        padding-bottom     : 1.2rem;
+        padding-top        : 1.8rem;
+        box-sizing         : border-box;
+        font-size          : 1.4rem;
+        border-top         : .2rem solid;
+        border-bottom      : .2rem solid;
+        border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 0%, rgba(240, 240, 240, 0.8158613787311799) 70%, rgba(255, 255, 255, 1) 100%);
+        transition         : all 0.1s ease-in-out;
+        cursor             : pointer;
+    }
+
+    &__icon-container {
+        text-align: right;
+    }
+
+    &__icon {
+        font-size: 2.4rem;
+        display  : inline-block;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+    }
+
+    &__nav-item:hover {
+        color              : #47484A;
+        border-top         : .2rem solid;
+        border-bottom      : .2rem solid;
+        border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(157, 152, 152, 1) 0%, rgba(157, 152, 152, 0.8802871490393032) 70%, rgba(255, 255, 255, 1) 100%);
+        border-image-slice : 1;
+        transition         : all 0.1s ease-in-out;
+    }
+
+}
+
+#wrapper.toggled .sidebar {
+    width: 25rem;
+}
+
+
+
+/*Styles Of Side Menu-Bar*/
+
+
+
+.toggle_menu {
+    /*position       : fixed;
+     left            : 0;*/
+    padding          : .5rem 1rem .5rem 1rem;
+    /*margin-top     : 10px;*/
+    color            : $color-white;
+    cursor           : pointer;
+    background-color : #648B79;
+    z-index          : 10000;
+    font-size        : 2rem;
+    transition       : all 0.4s ease-out;
+}
+
+
+#right-side-wrapper {
+    /* This is the main content Window */
+    width   : 100%;
+    position: absolute;
+
+}
+
+#wrapper.toggled #right-side-wrapper {
+    /* We move it contents with the sidebar animation */
+    position: absolute;
+    /* Otherwise it will overlapsed */
+    margin-right: -25rem;
+
+}
+
+/*END - Styles Of Side Menu-Bar
+ =================================*/
