@@ -1,0 +1,17 @@
+/*==============================
+      Main - Content - Container
+ ================================*/
+
+ /* still haven't use this container for this project. */
+
+ .page-content-wrapper {
+    padding   : 1.5rem;
+    margin-top: 2rem;
+}
+
+.main_content {
+    background-color: #fff;
+    box-shadow      : .1rem .1rem .1rem rgba(0, 0, 0, 0.2);
+    border          : .1rem solid rgba(0, 0, 0, .125);
+    padding         : 2rem 2rem;
+}

@@ -1,0 +1,32 @@
+/*=====================
+    Genral Settings 
+ ======================*/
+
+*,
+*::after,
+*::before {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* font-size: 10px; */
+    /* 1rem = 10px */
+    /* but when we set this up as a pixel value old people can't cange the fontsize from the bowser */
+    /* this will simplifies the all rem value calculations */
+    font-size: 62.5%;
+}
+
+body {
+    font-family     : 'lato', sans-serif;
+    /* font-size    : 1.6rem; */
+    font-weight     : 400;
+    line-height     : 1.7;
+    color           : $color-font;
+    background-color: $color-background;
+    box-sizing      : border-box;
+
+}
+
+/* End - General Settings */

@@ -1,0 +1,154 @@
+/*==============================
+         Budget App Cards
+  =============================== */
+
+  .bgt-mas {
+    /* This class is essential for the masonery Grid */
+    float     : left;
+    min-height: 2rem;
+}
+
+.budget-cards-wrapper {
+    margin-bottom: 3rem;
+
+    /* clearfix */
+    &:after {
+        /* also for the masonery Grid , Not essential, Best Practice */
+        content: '';
+        display: block;
+        clear  : both;
+    }
+
+}
+
+.budget-card {
+    background-color      : #fff;
+    padding               : 1.5rem;
+    padding-right         : 1rem;
+    border                : .1rem solid rgba(0, 0, 0, .125);
+    /* -webkit-box-shadow : 0px 0px 3px 1px rgba(0,0,0,0.57); 
+     box-shadow           : 0px 0px 3px 1px rgba(0,0,0,0.57); */
+
+    &__header {
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        color: #4ABDAC;
+    }
+
+    &__title h2 {
+        font-size  : 32px;
+        font-weight: 700;
+        background : #ffffff;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    &__total {
+        text-align   : right;
+        padding-right: 20px;
+    }
+
+    &__total h3 {
+        font-size  : 24px;
+        font-weight: 600;
+    }
+
+    &__total h4 {
+        font-size  : 32px;
+        font-weight: 600;
+    }
+
+    &__form {
+        margin-bottom: 10px;
+    }
+
+    &__body {
+        background-color: #F5F6FA;
+        padding-left    : 1rem;
+        padding-right   : 1rem;
+        padding-top     : 2rem;
+        padding-bottom  : 2rem;
+        border-radius   : .6rem;
+    }
+
+    &__item {
+        background-color: #fff;
+        padding-top     : 1rem;
+        padding-bottom  : .2rem;
+        margin-bottom   : 1rem;
+        line-height     : .15rem;
+    }
+    
+    &__price-tag {
+        text-align: end;
+        transition: transform 0.3s;
+    }
+    
+    & h5 {
+        font-size: 1.6rem;
+    
+    }
+    
+    &__delete-btn {
+        font-size     : 1.6rem;
+        background    : none;
+        border        : none;
+        cursor        : pointer;
+        display       : inline-block;
+        vertical-align: top;
+        margin-top    : -.2rem;
+        display       : none;
+    }
+    
+    &__delete-btn:focus {
+        outline: none;
+    }
+    
+    &__delete-btn:active {
+        transform: translateY(.2rem);
+    }
+    
+    &__item:hover &__delete-btn {
+        display: block;
+    }
+    
+    &__item:hover &__price-tag {
+        transform: translateX(-2rem);
+    }
+}
+
+.title-with-border {
+    width        : 100%;
+    overflow     : hidden;
+    margin-bottom: 3rem;
+    display      : flex;
+    align-items  : flex-end;
+}
+
+.title-with-border .title-with-border__h4 {
+    order         : 1;
+    letter-spacing: -.03em;
+    font-weight   : 700;
+    margin-bottom : 0;
+    color         : #4ABDAC;
+    line-height   : 1;
+}
+
+.title-with-border:after {
+    content         : "";
+    order           : 1;
+    height          : .2rem;
+    margin-bottom   : .2rem;
+    margin-left     : 1rem;
+    margin-right    : 1rem;
+    flex            : 1 1 0%;
+    background-color: #e8e8e8;
+}
+
+.title-with-border .title-with-border__h4 a {
+    display   : block;
+    color     : #4ABDAC;
+    transition: all .2s ease-in-out;
+}
+
