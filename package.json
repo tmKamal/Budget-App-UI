@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Cr-hunteR/Budget-App-UI#readme",
   "devDependencies": {
     "node-sass": "^4.13.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1"
   }
 }
