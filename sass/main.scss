@@ -2,6 +2,7 @@ $theme-colors: (
   
   "primary": #ff4136
 );
+$font-size-base: 1.5rem;
 
 @import "node_modules/bootstrap/scss/bootstrap";//bootstrap all in one.
 @import "abstracts/variables";
