@@ -7138,6 +7138,17 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+/* Responsive */
+/* 
+Break Points
+
+-phone [<600px]
+-portrait-tablet  = tab-port [<900px]
+-landscape-tablet = tab-land [<1200px]
+-big-desktop  [>1800px]
+-[1200px < current styles < 1800px]
+*/
+/* Media Queries don't work well with rem */
 /*=====================
     Genral Settings 
  ======================*/
@@ -7153,11 +7164,23 @@ html {
   /* 1rem = 10px */
   /* but when we set this up as a pixel value old people can't cange the fontsize from the bowser */
   /* this will simplifies the all rem value calculations */
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  /* [1200px < currentFontSize < 1800px] */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 43.75%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: 'lato', sans-serif;
-  /* font-size    : 1.6rem; */
   font-weight: 400;
   line-height: 1.7;
   color: #777;
@@ -7275,25 +7298,25 @@ body {
   /* -webkit-box-shadow : 0px 0px 3px 1px rgba(0,0,0,0.57); 
      box-shadow           : 0px 0px 3px 1px rgba(0,0,0,0.57); */ }
   .budget-card__header {
-    margin-bottom: 5px; }
+    margin-bottom: .5rem; }
   .budget-card__title {
     color: #4ABDAC; }
   .budget-card__title h2 {
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 700;
     background: #ffffff;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
+    text-shadow: 0 0.1rem 0 rgba(255, 255, 255, 0.4); }
   .budget-card__total {
     text-align: right;
-    padding-right: 20px; }
+    padding-right: 2rem; }
   .budget-card__total h3 {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 600; }
   .budget-card__total h4 {
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 600; }
   .budget-card__form {
-    margin-bottom: 10px; }
+    margin-bottom: 1rem; }
   .budget-card__body {
     background-color: #F5F6FA;
     padding-left: 1rem;
@@ -7497,7 +7520,7 @@ body {
   padding: 2rem 2rem; }
 
 /*==================================
- Responsive Media Queries
+    Responsive Media Queries
  ===================================*/
 @media (min-width: 768px) {
   #wrapper {
