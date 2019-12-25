@@ -15,12 +15,26 @@ html {
     /* 1rem = 10px */
     /* but when we set this up as a pixel value old people can't cange the fontsize from the bowser */
     /* this will simplifies the all rem value calculations */
-    font-size: 62.5%;
+    font-size: 62.5%;/* [1200px < currentFontSize < 1800px] */
+
+    @include respond(tab-land){
+        font-size: 56.25%; //1rem=9px
+    }
+    @include respond(tab-port){
+        font-size: 50%; //1rem=8px
+    }
+    @include respond(phone){
+        font-size: 43.75%; //1rem=7px
+    }
+    
+    
+    @include respond(big-desktop){
+        font-size: 75%; //1rem=12px
+    }
 }
 
 body {
     font-family     : 'lato', sans-serif;
-    /* font-size    : 1.6rem; */
     font-weight     : 400;
     line-height     : 1.7;
     color           : $color-font;

@@ -5,6 +5,7 @@ $theme-colors: (
 $font-size-base: 1.5rem;
 
 @import "node_modules/bootstrap/scss/bootstrap";//bootstrap all in one.
+@import "abstracts/mixins";
 @import "abstracts/variables";
 @import "base/base";
 @import "layout/top-nav";
@@ -14,7 +15,7 @@ $font-size-base: 1.5rem;
 @import "components/main-container";
 
 /*==================================
- Responsive Media Queries
+    Responsive Media Queries
  ===================================*/
 @media(min-width:768px) {
     #wrapper {

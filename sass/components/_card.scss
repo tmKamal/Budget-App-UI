@@ -30,7 +30,7 @@
      box-shadow           : 0px 0px 3px 1px rgba(0,0,0,0.57); */
 
     &__header {
-        margin-bottom: 5px;
+        margin-bottom: .5rem;
     }
 
     &__title {
@@ -38,29 +38,29 @@
     }
 
     &__title h2 {
-        font-size  : 32px;
+        font-size  : 3.2rem;
         font-weight: 700;
         background : #ffffff;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+        text-shadow: 0 .1rem 0 rgba(255, 255, 255, 0.4);
     }
 
     &__total {
         text-align   : right;
-        padding-right: 20px;
+        padding-right: 2rem;
     }
 
     &__total h3 {
-        font-size  : 24px;
+        font-size  : 2.4rem;
         font-weight: 600;
     }
 
     &__total h4 {
-        font-size  : 32px;
+        font-size  : 3.2rem;
         font-weight: 600;
     }
 
     &__form {
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
     }
 
     &__body {
