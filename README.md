@@ -1,13 +1,28 @@
 # Budget App Masonry UI
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
 * Bootstrap 4.0
 * Sass 3 [Syntax:SCSS]
 * Masonry.js
 * Google Material Design
 
-[![Product Name Screen Shot][product-screenshot]](https://imgur.com/jqtTZPF)
+### Installation
+
+1. Clone the repo
+```sh
+git clone https://github.com/your_username_/Project-Name.git
+```
+2. Install NPM packages
+```sh
+npm install
+```
+3. SCSS Auto Compile Script
+```sh
+npm run compile:sass
+```
+
+![Image of Yaktocat](https://i.imgur.com/jqtTZPF.jpg)
 
 
 
