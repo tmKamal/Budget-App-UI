@@ -22,9 +22,12 @@ npm install
 npm run compile:sass
 ```
 
-![Image of Yaktocat](https://i.imgur.com/jqtTZPF.jpg)
+![Image of Yaktocat](https://i.imgur.com/JCXymzU.png)
 
+<!-- LICENSE -->
+## License
 
+Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
