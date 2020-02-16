@@ -25,7 +25,7 @@ npm run compile:sass
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [MIT](LICENSE)`LICENSE` for more information.
 
 
 
