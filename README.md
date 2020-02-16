@@ -22,8 +22,6 @@ npm install
 npm run compile:sass
 ```
 
-![Image of Yaktocat](https://i.imgur.com/JCXymzU.png)
-
 <!-- LICENSE -->
 ## License
 
